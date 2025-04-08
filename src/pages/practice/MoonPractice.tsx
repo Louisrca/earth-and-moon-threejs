@@ -26,6 +26,7 @@ function MoonPractice({
 
   const texture = useLoader(THREE.TextureLoader, imagePath);
   useFrame((state, delta) => {
+    console.log("🚀 ~ useFrame ~ state:", state);
     if (meshRef.current && speed) {
       meshRef.current.rotation.y += delta * speed;
     }
@@ -52,6 +53,7 @@ function RotatingGroup() {
   const earthGroupRef = useRef<THREE.Group>(null);
   const moonGroupRef = useRef<THREE.Group>(null);
   useFrame((state, delta) => {
+    console.log("🚀 ~ useFrame ~ state:", state);
     if (groupRef.current) {
       groupRef.current.rotation.y += delta * 0.2;
     }
