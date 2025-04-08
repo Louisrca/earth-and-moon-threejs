@@ -46,7 +46,7 @@ export default function Planet({
       {...props}
       ref={meshRef}
       position={position}
-      castShadow // Permet à l'objet de projeter des ombres
+      castShadow
       receiveShadow
       scale={scale}
       onClick={handleClick}

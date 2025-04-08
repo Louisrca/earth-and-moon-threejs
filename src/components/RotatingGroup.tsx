@@ -10,22 +10,21 @@ export default function RotatingGroup() {
   const moonGroupRef = useRef<THREE.Group>(null);
 
   const earthScale = 1;
-  const moonScale = 0.27;
+  const moonScale = 0.27; // La Lune fait environ 27% de la taille de la Terre
   const sunScale = 11;
 
-  // La Lune fait environ 27% de la taille de la Terre
-  const moonDistance = 2.5; // Environ 60 rayons terrestres, réduit pour la visualisation
+  const moonDistance = 2.5;
 
   useFrame((state, delta) => {
     console.log("🚀 ~ useFrame ~ state:", state);
     if (groupRef.current) {
-      groupRef.current.rotation.y += delta * 0.2;
+      groupRef.current.rotation.y += delta * 0.1;
     }
     if (earthGroupRef.current) {
-      earthGroupRef.current.rotation.y += delta * 0.1; // Rotation de la Terre autour du Soleil
+      earthGroupRef.current.rotation.y += delta * 0.05;
     }
     if (moonGroupRef.current) {
-      moonGroupRef.current.rotation.y += delta * 0.1;
+      moonGroupRef.current.rotation.y += delta * 0.05;
     }
   });
 
@@ -59,7 +58,6 @@ export default function RotatingGroup() {
           </group>
         </group>
       </group>
-      {/* <BlenderModel /> */}
     </>
   );
 }

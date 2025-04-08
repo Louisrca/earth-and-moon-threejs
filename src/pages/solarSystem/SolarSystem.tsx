@@ -1,6 +1,7 @@
 import { Canvas } from "@react-three/fiber";
-import RotatingGroup from "./RotatingGroup";
+import RotatingGroup from "../../components/RotatingGroup";
 import { OrbitControls } from "@react-three/drei";
+import SettingsModal from "../../components/SettingsModal";
 
 export default function SolarSystem() {
   return (
@@ -8,7 +9,7 @@ export default function SolarSystem() {
       <Canvas
         camera={{
           position: [0, 0, 60],
-          fov: 60,
+          fov: 100,
         }}
       >
         <pointLight decay={0} intensity={Math.PI} />
@@ -19,9 +20,10 @@ export default function SolarSystem() {
           enableRotate={true}
           zoomSpeed={1.0}
           maxDistance={500}
-          minDistance={5}
+          minDistance={1}
         />
       </Canvas>
+      <SettingsModal />
     </div>
   );
 }
