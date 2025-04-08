@@ -97,7 +97,9 @@ export default function SettingsModal() {
 
           <div className={styles.settingRow}>
             <label htmlFor="volume-slider" className={styles.label}>
-              Volume: {soundSettings.volume}%
+              Volume:{" "}
+              <span className={styles.volumeValue}>{soundSettings.volume}</span>
+              %
             </label>
             <input
               id="volume-slider"

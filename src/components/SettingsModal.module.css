@@ -23,6 +23,46 @@
   gap: 0.4rem;
 }
 
+.volumeValue {
+  min-width: 2rem;
+  width: 2rem;
+  text-align: center;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.slider {
+  cursor: pointer;
+  -webkit-appearance: none;
+  background-color: rgb(144, 120, 250);
+  height: 0.4rem;
+  border-radius: 0.2rem;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: rgb(81, 59, 178);
+  border: 2px solid rgb(201, 201, 201);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: rgb(81, 59, 178);
+  border: 2px solid rgb(201, 201, 201);
+  cursor: pointer;
+}
+
+/* Surbrillance lorsque le curseur est actif */
+.slider::-webkit-slider-thumb:hover,
+.slider::-moz-range-thumb:hover {
+  background: rgb(144, 120, 250);
+}
+
 .playSong {
   cursor: pointer;
   color: rgb(144, 120, 250);
@@ -32,4 +72,58 @@
 .playSong:hover {
   transition: 0.5s;
   color: rgb(81, 59, 178);
+}
+
+.select {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  background-color: rgb(50, 50, 50);
+  color: rgb(201, 201, 201);
+  border: 1px solid rgb(144, 120, 250);
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='rgb(144, 120, 250)' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  padding-right: 1.5rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.select:hover {
+  border-color: rgb(169, 150, 255);
+}
+
+.select:focus {
+  border-color: rgb(81, 59, 178);
+  box-shadow: 0 0 0 2px rgba(144, 120, 250, 0.3);
+}
+
+.select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: rgb(40, 40, 40);
+  border-color: rgb(100, 100, 100);
+}
+
+/* Style des options du select */
+.select option {
+  background-color: rgb(50, 50, 50);
+  color: rgb(201, 201, 201);
+  padding: 0.5rem;
+}
+
+/* Pour Firefox */
+.select option:checked {
+  background-color: rgb(81, 59, 178);
+  color: white;
+}
+
+/* Pour Chrome */
+.select option:hover {
+  background-color: rgb(81, 59, 178);
 }
