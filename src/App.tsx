@@ -1,13 +1,12 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-// import Home from "./pages/Home";
-import MoonPractice from "./pages/practice/MoonPractice";
+import SolarSystem from "./pages/solarSystem/SolarSystem";
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<MoonPractice />} />
+        <Route path="/" element={<SolarSystem />} />
         {/* <Route path="/" element={<Home />} /> */}
       </Routes>
     </>
