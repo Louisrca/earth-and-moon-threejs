@@ -2,6 +2,7 @@ import { Canvas } from "@react-three/fiber";
 import RotatingGroup from "../../components/RotatingGroup";
 import { OrbitControls } from "@react-three/drei";
 import SettingsModal from "../../components/SettingsModal";
+import Stars from "../../components/Stars";
 
 export default function SolarSystem() {
   return (
@@ -12,6 +13,7 @@ export default function SolarSystem() {
           fov: 100,
         }}
       >
+        <Stars count={1000} />
         <pointLight decay={0} intensity={Math.PI} />
         <RotatingGroup />
         <OrbitControls

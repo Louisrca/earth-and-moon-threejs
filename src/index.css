@@ -13,10 +13,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 body {
-  background-image: url("/image-bg-space-5.jpg");
+  /* background-image: url("/image-bg-space-5.jpg"); */
   background-size: cover; /* Pour que l'image couvre tout l'écran */
   background-repeat: no-repeat; /* Pour éviter la répétition */
   background-position: center; /* Pour centrer l'image */
+
+  background-color: rgb(1, 4, 11);
 }
 
 a {

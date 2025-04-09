@@ -51,7 +51,7 @@ export default function Planet({
       scale={scale}
       onClick={handleClick}
     >
-      <sphereGeometry args={[1, 32, 32]} />
+      <sphereGeometry args={[1, 64, 64]} />
       <meshStandardMaterial
         map={texture}
         lightMap={imagePath == "/image-sun.png" ? texture : undefined}
