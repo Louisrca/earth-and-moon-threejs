@@ -11,6 +11,8 @@ type MoonPracticeProps = {
   speed?: number;
   totalRotation?: boolean;
   onPlanetClick?: (position: [number, number, number], scale: number) => void;
+  color?: string;
+  intensity?: number;
 };
 
 export default function Planet({
@@ -21,6 +23,8 @@ export default function Planet({
   speed,
   totalRotation,
   onPlanetClick,
+  color,
+  intensity,
 }: MoonPracticeProps) {
   const meshRef = useRef<Mesh>(null);
 
@@ -56,6 +60,9 @@ export default function Planet({
         map={texture}
         lightMap={imagePath == "/image-sun.png" ? texture : undefined}
         lightMapIntensity={imagePath == "/image-sun.png" ? 4 : 0}
+        emissive={color ? color : undefined}
+        emissiveIntensity={intensity ? intensity : 0}
+        toneMapped={false}
       />
     </mesh>
   );

@@ -35,6 +35,8 @@ export default function RotatingGroup() {
           imagePath="/image-sun.png"
           scale={sunScale}
           speed={0}
+          color="red"
+          intensity={0.9}
         />
 
         <group ref={earthGroupRef} position={[35, 0, 0]}>
@@ -44,7 +46,6 @@ export default function RotatingGroup() {
               imagePath="/image-earth.png"
               scale={earthScale}
               speed={0.2}
-              totalRotation={false}
             />
           </group>
 
