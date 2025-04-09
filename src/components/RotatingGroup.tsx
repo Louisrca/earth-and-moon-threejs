@@ -2,7 +2,6 @@ import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 import Planet from "./Planet";
-// import BlenderModel from "./BlenderModel";
 
 export default function RotatingGroup() {
   const groupRef = useRef<THREE.Group>(null);
@@ -10,7 +9,7 @@ export default function RotatingGroup() {
   const moonGroupRef = useRef<THREE.Group>(null);
 
   const earthScale = 1;
-  const moonScale = 0.27; // La Lune fait environ 27% de la taille de la Terre
+  const moonScale = 0.27;
   const sunScale = 11;
 
   const moonDistance = 2.5;

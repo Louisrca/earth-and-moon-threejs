@@ -78,19 +78,19 @@ export default function SettingsModal() {
 
   return (
     <div className={styles.modal}>
-      <section className={styles.modalTitle}>
+      <section className={styles.title}>
         <h2>Settings</h2>
       </section>
 
       <section>
-        <h4 className={styles.sectionTitle}>Sound Settings</h4>
+        <h4 className={styles.subtitle}>Sound Settings</h4>
 
         <div className={styles.settingGroup}>
           <div className={styles.settingRow}>
             <label htmlFor="sound-toggle" className={styles.label}>
               Enable Sound
             </label>
-            <span className={styles.playSong} onClick={handleSoundToggle}>
+            <span className={styles.playButton} onClick={handleSoundToggle}>
               {soundSettings.enabled ? "Pause" : "Play"}
             </span>
           </div>

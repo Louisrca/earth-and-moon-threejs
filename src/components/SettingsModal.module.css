@@ -9,7 +9,7 @@
   border-radius: 0.4rem;
 }
 
-.modalTitle {
+.title {
   border-bottom: solid 1px rgb(144, 120, 250);
   margin-bottom: 0.8rem;
 }
@@ -57,13 +57,12 @@
   cursor: pointer;
 }
 
-/* Surbrillance lorsque le curseur est actif */
 .slider::-webkit-slider-thumb:hover,
 .slider::-moz-range-thumb:hover {
   background: rgb(144, 120, 250);
 }
 
-.playSong {
+.playButton {
   cursor: pointer;
   color: rgb(144, 120, 250);
   font-weight: 800;
@@ -110,20 +109,17 @@
   border-color: rgb(100, 100, 100);
 }
 
-/* Style des options du select */
 .select option {
   background-color: rgb(50, 50, 50);
   color: rgb(201, 201, 201);
   padding: 0.5rem;
 }
 
-/* Pour Firefox */
 .select option:checked {
   background-color: rgb(81, 59, 178);
   color: white;
 }
 
-/* Pour Chrome */
 .select option:hover {
   background-color: rgb(81, 59, 178);
 }
